@@ -1,0 +1,114 @@
+
+html {
+  box-sizing: 'border-box'
+}
+body{
+  background-image: url('matrix-gif-wallpaper-5.jpg');
+}
+.guess{
+  display: inline;
+  font-size: 60px;
+  color: #c3f7c3;
+  border-style: outset;
+  border-color: #93c399;
+  border-width: medium;
+  border-radius: 5em / 15em;
+}
+#app{
+  width: 60%;
+  margin: 50px auto;
+  border-style: outset;
+  border-color: #93c399;
+  border-width: small;
+  border-radius: 5em / 15em;
+  background-color: #59b7593b;
+}
+
+#headers {
+  text-align: center;
+}
+
+#input-parent {
+  width: 160px;
+  margin: 0 auto 0 auto;
+  position: relative;
+  border-radius: 50%;
+}
+
+#players-input{
+  font-size: 50px;
+  height: 160px;
+  width: 160px;
+  border-style: outset;
+  border-color: #93c399;
+  border-width: medium;
+  border-radius: 50%;
+}
+
+#submit{
+  position: absolute;
+  top: 95px;
+  left: 95px;
+  height: 60px;
+  width: 60px;
+  color: white;
+  font-size: 27px;
+  padding: 4px 7px 4px 7px;
+  margin: 4px 7px 4px 7px;
+  border-style: outset;
+  border-color: #93c399;
+  border-width: medium;
+  border-radius: 50%;
+}
+#hint {
+  color: white;
+  font-size: 20px;
+  padding: 4px 7px 4px 7px;
+  border-radius: 7.5em 5em;
+  border-style: outset;
+  border-color: #93c399;
+  border-width: medium;
+}
+#reset {
+  color: white;
+  font-size: 20px;
+  padding: 4px 7px 4px 7px;
+  border-radius: 5em 7.5em;
+  border-style: outset;
+  border-color: #93c399;
+  border-width: medium;
+}
+#headers{
+  color: #c4efd8;
+  font-size: 20px;
+  box-shadow: 10px;
+  border-radius: 6em;
+  border-color: #253e54
+  border-width: 10px;
+  background-color: #00000052
+}
+
+  .center {
+    text-align: center;
+  }
+  ul {
+      list-style: none;
+      padding: 0;
+  }
+  img {
+      display: inline-block;
+      width: 280px;
+      height: 100px;
+  }
+
+  #footer {
+      width: 100%;
+      border-top: solid 5px green;
+      background-color: white;
+      position: fixed;
+      bottom: 0;
+  }
+
+  #signature{
+    font: green;
+  }
