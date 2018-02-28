@@ -1,16 +1,16 @@
-$(document).ready(function() {
-  var game = new Game();
-
-  $('#submit').on('click', function() {
-    makeAGuess(game);
-  })
-
-  $('#player-input').keypress(function(event){
-    if(event.which == 13){
-      makeAGuess(game);
-    }
-  })
-})
+// $(document).ready(function() {
+//   var game = new Game();
+//
+//   $('#submit').on('click', function() {
+//     makeAGuess(game);
+//   })
+//
+//   $('#player-input').keypress(function(event){
+//     if(event.which == 13){
+//       makeAGuess(game);
+//     }
+//   })
+// })
 
 var Game = function() {
     this.playersGuess = null;
@@ -63,15 +63,17 @@ Game.prototype.checkGuess = function() {
             }
             else {
                 var diff = this.difference();
+                console.log('diff', diff);
+                console.log('winning number', this.winningNumber);
                 if(this.isLower()) {
                     $('#subtitle').text("Guess Higher!")
                 } else {
                     $('#subtitle').text("Guess Lower!")
                 }
-                if(diff < 10) return'You\'re burning up!';
-                else if(diff < 25) return'You\'re lukewarm.';
-                else if(diff < 50) return'You\'re a bit chilly.';
-                else return'You\'re ice cold!';
+                if(diff < 10) return"You're burning up!";
+                else if(diff < 25) return"You're lukewarm.";
+                else if(diff < 50) return"You're a bit chilly.";
+                else return"You're ice cold!";
             }
         }
     }
@@ -93,9 +95,11 @@ function shuffle(arr) { //Fisher-Yates - https://bost.ocks.org/mike/shuffle/
 }
 
 function makeAGuess(game) {
-    var guess = $('#player-input').val();
+    var guess = $('#players-input').val()
+    console.log('guess', guess);
     $('#player-input').val("");
     var output = game.playersGuessSubmission(parseInt(guess,10));
+    console.log('output', output)
     $('#title').text(output);
 }
 
